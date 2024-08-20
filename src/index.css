@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: lightblue;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrar verticalmente en toda la pantalla */
+}
+
+/* Encabezado */
+h1 {
+    text-align: center;
+    margin-bottom: 20px; 
+    margin-top: 20px; 
+    font: bold 44px sans-serif;
+    color: white;
+}
+
+h1 {
+    color: transparent;
+    -webkit-text-stroke: 1px blueviolet;
+    position: relative;
+}
+
+h1::before{
+  content: "";
+  overflow: hidden;
+  color: blueviolet;
+  position: absolute;
+  width: 0%;
+  border-right: 4px solid blueviolet;
+  transition: 1s ease-in-out;  
+}
+
+h1:hover::before{
+  width: 100%;
+  filter: drop-shadow(0 0 20px blueviolet);
+}
+/* Contenedor del formulario */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre el input y el botón */
+    margin-bottom: 20px; /* Espacio entre el formulario y la lista */
+}
+
+/* Estilos del input */
+input {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    background-color: aliceblue;
+    border: 1px solid gray;
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 16px;
+}
+
+/* Estilos del botón */
+button {
+    width: 100px;
+    height: 40px;
+    background-color: aliceblue;
+    border: 1px solid gray;
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón */
+button:hover {
+    background-color: #f0f8ff;
+}
+
+/* Estilos de la lista */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 14px;
+    width: 100%; /* Hacer que la lista ocupe todo el ancho disponible */
+    max-width: 400px; /* Limitar el ancho máximo de la lista */
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    word-wrap: break-word; /* Para manejar textos largos */
+}
+
+/* Hover para los elementos de la lista */
+li:hover {
+    background-color: #e0e0e0;
+}
